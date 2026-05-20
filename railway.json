@@ -1,0 +1,13 @@
+{
+  "$schema": "https://railway.app/schema.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "nixpacksLangs": ["python311", "nodejs_20"]
+  },
+  "deploy": {
+    "numInstances": 1,
+    "sleepApplication": false,
+    "restartPolicyType": "ON_FAILURE",
+    "restartThresholdMax": 5
+  }
+}
