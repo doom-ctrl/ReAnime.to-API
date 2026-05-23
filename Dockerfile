@@ -24,5 +24,5 @@ COPY reanime.py .
 # Expose port
 EXPOSE 8000
 
-# Run the app
-CMD ["python", "-m", "uvicorn", "reanime:app", "--host", "0.0.0.0", "--port", "8000"]
+# Run the app - use Railway's PORT environment variable
+CMD ["sh", "-c", "python -m uvicorn reanime:app --host 0.0.0.0 --port $PORT"]
